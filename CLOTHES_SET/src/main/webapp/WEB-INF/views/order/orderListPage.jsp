@@ -38,7 +38,14 @@
 	function fn_usemPoint() { // ${loginDTO.mPoint} 값과 비교해서 사용 가능한지 안하는지 부터 확인
 		var mPoint = parseInt('${loginDTO.mPoint}');
 		var usemPoint = parseInt($('#usemPoint').val());
-		var finalPrice = parseInt($('#final_price').text());
+		var finalPriceStr = $('#final_price').text().split(',');
+		var finalPrice = '';
+		$.each(finalPriceStr, function( item ) {
+			finalPrice += item;
+		});
+		finalPrice = parseInt(finalPrice);
+		
+		
 		if ( mPoint < usemPoint ){
 			alert('가지고 계신 포인트보다 높은 값입니다.');
 		} else {	

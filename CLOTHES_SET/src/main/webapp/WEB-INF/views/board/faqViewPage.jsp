@@ -45,7 +45,7 @@
 			<tfoot>
 				<tr>
 					<td colspan="2">
-						<button onclick="location.href='boardListPage?bClass=2'">FAQ 목록</button>
+						<button class="centered" onclick="location.href='boardListPage?bClass=2'">FAQ 목록</button>
 					</td>
 				</tr>
 			</tfoot>
